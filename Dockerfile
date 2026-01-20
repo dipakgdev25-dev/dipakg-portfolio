@@ -7,7 +7,7 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY . /usr/share/nginx/html
 
 # Expose port
-EXPOSE 80
+EXPOSE 9090
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
