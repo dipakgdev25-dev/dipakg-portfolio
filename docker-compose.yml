@@ -4,6 +4,6 @@ services:
   html:
     build: .
     container_name: dokploy-html
-    expose:
-      - "9999"
+    ports:
+      - 9999:80
     restart: unless-stopped
