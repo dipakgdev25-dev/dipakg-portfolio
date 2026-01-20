@@ -1,13 +1,10 @@
 FROM nginx:alpine
 
-# Remove default nginx website
-RUN rm -rf /usr/share/nginx/html/*
+# Change nginx to listen on 9999
+RUN sed -i 's/listen       80;/listen 9999;/g' /etc/nginx/conf.d/default.conf
 
-# Copy all static files
 COPY . /usr/share/nginx/html
 
-# Expose port
-EXPOSE 80
+EXPOSE 9999
 
-# Start nginx
 CMD ["nginx", "-g", "daemon off;"]
