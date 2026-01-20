@@ -4,4 +4,6 @@ services:
   html:
     build: .
     container_name: dokploy-html
+    expose:
+      - "9090"
     restart: unless-stopped
