@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  html-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: html_app
+    restart: always
+    ports:
+      - "80:80"
