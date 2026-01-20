@@ -4,6 +4,4 @@ services:
   html:
     build: .
     container_name: dokploy-html
-    ports:
-      - "9090:80"
     restart: unless-stopped
